@@ -14,8 +14,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Copy the docker-entrypoint script into the container and make it executable
+
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
 
 # Expose the port the app runs on
 EXPOSE 8000
