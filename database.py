@@ -1,10 +1,13 @@
 import sqlalchemy as _sql
+from dotenv import load_dotenv
+import os
 import sqlalchemy.ext.declarative as _declarative
 import sqlalchemy.orm as _orm
 
 # DB Connetion and configurations
-# DATABASE_URL = "postgresql://myuser:password@localhost/fastapi_database"
-DATABASE_URL = "postgresql://myuser:password@localhost:5433/fastapi_database"
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 
 engine = _sql.create_engine(DATABASE_URL)

@@ -1,4 +1,4 @@
 fastapi[all]
-SQLAlchemy
+uvicorn
 psycopg2-binary
-black
+sqlalchemy
